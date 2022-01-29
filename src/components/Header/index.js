@@ -1,7 +1,7 @@
 import React from 'react';
 
 import logo from '../../assets/images/logo.png';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Container, LinkLogo, Logo, ContainerCart, Items } from './styles';
 
@@ -15,7 +15,7 @@ export default function Header({ navigation }) {
         <Logo source={logo} alt="Grolli T Shirt" />
       </LinkLogo>
       <ContainerCart onPress={() => navigate('Config')}>
-        <Icon name="shopping-basket" size={30} color="#2c8057" />
+        <Icon name="settings" size={30} color="#000" />
       </ContainerCart>
     </Container>
   );

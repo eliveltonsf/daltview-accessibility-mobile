@@ -8,13 +8,13 @@ export const Container = styled.View`
 `;
 
 export const LinkLogo = styled.TouchableOpacity`
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
 export const Logo = styled.Image`
-  width: 110px;
-  height: 60px;
+  width: 120px;
+  height: 100px;
 `;
 
 export const ContainerCart = styled.TouchableOpacity`

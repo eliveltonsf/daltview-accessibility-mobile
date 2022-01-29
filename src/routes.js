@@ -16,7 +16,7 @@ function Routes() {
           title: 'Home',
           headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#8d8d8d',
+            backgroundColor: '#000',
           },
           headerTintColor: '#fff',
         }}
@@ -28,7 +28,7 @@ function Routes() {
           title: 'Configurações',
           headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#3d3d3d',
+            backgroundColor: '#000',
           },
           headerTintColor: '#fff',
         }}

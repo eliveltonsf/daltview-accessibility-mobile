@@ -8,7 +8,7 @@ export const Container = styled.View`
 export const ProductAreaView = styled.SafeAreaView`
   justify-content: center;
   align-items: center;
-  max-height: 565px;
+  height: 100%;
 `;
 
 export const List = styled.FlatList.attrs({

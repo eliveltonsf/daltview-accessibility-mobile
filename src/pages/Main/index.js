@@ -6,18 +6,11 @@ import Header from '../../components/Header';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { StyleSheet, FlatList } from 'react-native';
 
+import { Button } from 'react-native-elements';
+
 import {
   Container,
-  ProductAreaView,
-  ProductContainer,
-  Image,
-  // List,
-  Title,
-  Price,
-  Button,
-  ButtonText,
-  IconContainer,
-  ProductAmount,
+  ProductAreaView
 } from './styles';
 
 Icon.loadFont();
@@ -42,6 +35,16 @@ export default function Main({ navigation }) {
     <Container source>
       <Header navigation={navigation} />
       <ProductAreaView>
+      <Button
+                title="Import"
+                buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
+                containerStyle={{
+                  width: 200,
+                  marginHorizontal: 50,
+                  marginVertical: 10,
+                }}
+                titleStyle={{ color: 'white', marginHorizontal: 20 }}
+              />
       </ProductAreaView>
     </Container>
   );

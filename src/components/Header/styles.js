@@ -5,6 +5,7 @@ export const Container = styled.View`
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  height: 20%;
 `;
 
 export const LinkLogo = styled.TouchableOpacity`

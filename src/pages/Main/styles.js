@@ -2,13 +2,14 @@ import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
+  height: 100%;
   flex: 1;
 `;
 
 export const ProductAreaView = styled.SafeAreaView`
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 100%;
+  height: 80%;
 `;
 
 export const List = styled.FlatList.attrs({

@@ -87,9 +87,7 @@ export default function Main({navigation}) {
       }
       
       const res = JSON.stringify(response.assets[0].uri);
-      const teste = JSON.stringify(response.assets);
       console.log(res)
-      console.log(teste)
       setFilePath(res.split('"').join(''))
     });
   }

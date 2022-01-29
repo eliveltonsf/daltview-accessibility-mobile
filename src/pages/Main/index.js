@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
-
+import React, {useState, useEffect} from 'react';
 
 import Header from '../../components/Header';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { StyleSheet, FlatList } from 'react-native';
+import {StyleSheet, } from 'react-native';
 
-import { Button } from 'react-native-elements';
+import {Button,Image, Text} from 'react-native-elements';
 
-import {
-  Container,
-  ProductAreaView
-} from './styles';
+import {launchImageLibrary} from 'react-native-image-picker';
+
+import {Container, ProductAreaView} from './styles';
 
 Icon.loadFont();
 
@@ -29,22 +27,114 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Main({ navigation }) {
+export default function Main({navigation}) {
+  const [filePath, setFilePath] = useState();
+
+  const captureImage = async (type) => {
+    let options = {
+      mediaType: type,
+      maxWidth: 300,
+      maxHeight: 550,
+      quality: 1,
+      saveToPhotos: true,
+    };
+    
+      launchCamera(options, (response) => {
+        console.log('Response = ', response);
+
+        if (response.didCancel) {
+          alert('User cancelled camera picker');
+          return;
+        } else if (response.errorCode == 'camera_unavailable') {
+          alert('Camera not available on device');
+          return;
+        } else if (response.errorCode == 'permission') {
+          alert('Permission not satisfied');
+          return;
+        } else if (response.errorCode == 'others') {
+          alert(response.errorMessage);
+          return;
+        }
+        const res = JSON.stringify(response.assets[0].uri);
+     
+        setFilePath(res.split('"').join(''))
+      });
+    }
+
+  function chooseFile(type) {
+    let options = {
+      mediaType: type,
+      storageOptions: {
+        skipBackup: true,
+        path: 'images',
+      },
+    };
+
+    launchImageLibrary(options, response => {
+
+      if (response.didCancel) {
+        alert('User cancelled camera picker');
+        return;
+      } else if (response.errorCode == 'camera_unavailable') {
+        alert('Camera not available on device');
+        return;
+      } else if (response.errorCode == 'permission') {
+        alert('Permission not satisfied');
+        return;
+      } else if (response.errorCode == 'others') {
+        alert(response.errorMessage);
+        return;
+      }
+      
+      const res = JSON.stringify(response.assets[0].uri);
+      const teste = JSON.stringify(response.assets);
+      console.log(res)
+      console.log(teste)
+      setFilePath(res.split('"').join(''))
+    });
+  }
 
   return (
     <Container source>
       <Header navigation={navigation} />
       <ProductAreaView>
-      <Button
-                title="Import"
-                buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
-                containerStyle={{
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-                titleStyle={{ color: 'white', marginHorizontal: 20 }}
-              />
+
+         {/* <Image
+          source={{
+            uri: 'data:image/jpeg;base64,' + filePath.data,
+          }}
+          style={styles.imageStyle}
+        /> */}
+        <Image
+          source={{uri: filePath}}
+          style={{ width: 200, height: 200 }}
+        />
+        <Text >{filePath}</Text>
+
+
+        <Button
+          title="Capture to cam"
+          buttonStyle={{backgroundColor: 'rgba(39, 39, 39, 1)'}}
+          containerStyle={{
+            width: 200,
+            marginHorizontal: 50,
+            marginVertical: 10,
+          }}
+          titleStyle={{color: 'white', marginHorizontal: 20}}
+          onPress={() => captureImage('photo')}
+        />
+
+        <Button
+          title="Import to gallary"
+          buttonStyle={{backgroundColor: 'rgba(39, 39, 39, 1)'}}
+          containerStyle={{
+            width: 200,
+            marginHorizontal: 50,
+            marginVertical: 10,
+          }}
+          titleStyle={{color: 'white', marginHorizontal: 20}}
+          onPress={() => chooseFile('photo')}
+        />
       </ProductAreaView>
     </Container>
   );

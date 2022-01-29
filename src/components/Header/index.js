@@ -11,12 +11,12 @@ export default function Header({ navigation }) {
   const { navigate } = navigation;
   return (
     <Container>
-      <LinkLogo onPress={() => navigate('Main')}>
+      {/* <LinkLogo onPress={() => navigate('Main')}>
         <Logo source={logo} alt="Grolli T Shirt" />
       </LinkLogo>
       <ContainerCart onPress={() => navigate('Config')}>
         <Icon name="settings" size={30} color="rgba(39, 39, 39, 1)" />
-      </ContainerCart>
+      </ContainerCart> */}
     </Container>
   );
 }

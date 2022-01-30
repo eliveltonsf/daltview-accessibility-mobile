@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button} from "react-native";
+import {Button, ButtonText} from "./styles"
 
 export default function GreenColorButton({getGreenColor}){
 
@@ -36,6 +36,8 @@ export default function GreenColorButton({getGreenColor}){
     <Button disabled={statusColor} title="Verde" onPress={() => {
       GreenColor()
       getGreenColor(greenColorArray)}
-    } />
+    } >
+      <ButtonText>Verde</ButtonText>
+    </Button>
   );
 }

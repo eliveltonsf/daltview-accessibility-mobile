@@ -49,7 +49,10 @@ function Routes() {
       />
        <Stack.Screen
         name="Imageview"
-        component={Imageview}       
+        component={Imageview}   
+        options={{
+          headerLeft: null
+        }}    
       />
     </Stack.Navigator>
   );

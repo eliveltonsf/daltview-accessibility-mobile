@@ -6,11 +6,18 @@ export const Container = styled.View`
   flex: 1;
 `;
 
+export const ContainerImage = styled.View`
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+`;
+
 export const ProductAreaView = styled.SafeAreaView`
   justify-content: flex-end;
   align-items: center;
-  height: 80%;
+  height: 30%;
 `;
+
 
 export const List = styled.FlatList.attrs({
   showsVerticalScrollIndicator: false,
@@ -53,17 +60,10 @@ export const Button = styled(RectButton)`
   justify-content: center;
   align-self: stretch;
   height: 36px;
-  margin-top: 10px;
+  margin: 10px 20px;
   border-radius: 4px;
-  background: #78cea5;
-`;
-
-export const IconContainer = styled.View`
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #6F6F6F;
+  color: #000;
 `;
 
 export const ButtonText = styled.Text`
@@ -73,6 +73,14 @@ export const ButtonText = styled.Text`
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
+`;
+
+export const IconContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
 `;
 
 export const ProductAmount = styled.Text`

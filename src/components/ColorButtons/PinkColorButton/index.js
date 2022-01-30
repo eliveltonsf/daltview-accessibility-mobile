@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button} from "./styles"
+import {Button,ButtonText} from "./styles"
 
 export default function PinkColorButton({getPinkColor}){
 
@@ -36,6 +36,8 @@ export default function PinkColorButton({getPinkColor}){
     <Button disabled={statusColor} title="Rosa" onPress={() => {
       pinkColor()
       getPinkColor(pinkColorArray)}
-    } />
+    } >
+       <ButtonText>Rosa</ButtonText>
+    </Button>
   );
 }

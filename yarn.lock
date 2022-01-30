@@ -5875,10 +5875,10 @@ react-native-get-pixel@^0.0.5:
   resolved "https://registry.yarnpkg.com/react-native-get-pixel/-/react-native-get-pixel-0.0.5.tgz#f073835feb57b3dc2152b3ae572d9ab0c0e83df2"
   integrity sha512-JFJtkSLweCHD/BiJHnUSYCAVUzeJwoFBandOD77UkJAdNuCOaRU/6BgmGXuz6ufgn+wgkk1UGI3hyzAFFQuezQ==
 
-react-native-image-picker@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-1.1.0.tgz#c2a0523886edb4cf2cdc008ad0a71433142a4d53"
-  integrity sha512-/KjHf4NNAjl6XM7FQuqvGDz1wB9sRdLf86+2yksLW/QTRR7CitX4TLCM8ZF9CX6Y0MsCTndkZia3zWE+nt/GiA==
+react-native-image-picker@^4.7.3:
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-4.7.3.tgz#f5863b27bf2e76c83649dd8efea4598426bd04e8"
+  integrity sha512-eRKm4wlsmZHmsWFyv77kYc2F+ZyEVqe0m7mqhsMzWk6TQT4FBDtEDxmRDDFq+ivCu/1QD+EPhmYcAIpeGr7Ekg==
 
 react-native-pixel-color@^0.0.5:
   version "0.0.5"

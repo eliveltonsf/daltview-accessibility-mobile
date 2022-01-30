@@ -4,12 +4,21 @@ import { RectButton } from 'react-native-gesture-handler';
 export const Container = styled.View`
   height: 100%;
   flex: 1;
+  background-color: #fff;
+`;
+
+export const ContainerLogo = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  height: 60%;
 `;
 
 export const ProductAreaView = styled.SafeAreaView`
   justify-content: flex-end;
   align-items: center;
-  height: 80%;
+  height: 40%;
 `;
 
 export const List = styled.FlatList.attrs({
@@ -35,6 +44,11 @@ export const Image = styled.Image`
   margin-bottom:90px;
 `;
 
+export const Logo = styled.Image`
+  width: 294px;
+  height: 89px;
+`;
+
 export const Title = styled.Text.attrs({
   numberOfLines: 2,
 })`
@@ -57,17 +71,10 @@ export const Button = styled(RectButton)`
   justify-content: center;
   align-self: stretch;
   height: 36px;
-  margin-top: 10px;
+  margin: 10px 20px;
   border-radius: 4px;
-  background: #78cea5;
-`;
-
-export const IconContainer = styled.View`
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #6F6F6F;
+  color: #000;
 `;
 
 export const ButtonText = styled.Text`
@@ -79,11 +86,21 @@ export const ButtonText = styled.Text`
   color: #fff;
 `;
 
+export const IconContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+`;
+
+
+
 export const ProductAmount = styled.Text`
   color: #fff;
   margin-left: 5px;
 `;
-export const FirstAcessButton = styled.TouchableOpacity`
+export const FirstAcessButton =  styled(Button)`
   color: #6f6f6f;
   background: #fff;
   width: 80%;
@@ -91,10 +108,10 @@ export const FirstAcessButton = styled.TouchableOpacity`
   margin: 20px auto;
   margin-top: 40px;
 `;
-export const AccountButton = styled.TouchableOpacity`
+
+export const AccountButton = styled(Button)`
   color: #fff;
   background: #6f6f6f;
   width: 80%;
   align-self: center;
-  
 `;

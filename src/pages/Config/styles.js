@@ -182,24 +182,24 @@ export const TextPurchase = styled.Text`
   text-transform: uppercase;
   color: #fff;
 `;
-export const RedColorButton = styled.Button`
+export const RedColorButton = styled.TouchableOpacity`
   width:90%;
   height:28px;
 
 `;
-export const GreenColorButton = styled.Button`
+export const GreenColorButton = styled.TouchableOpacity`
   width:90%;
   height:28px;
 `;
-export const BlueColorButton = styled.Button`
+export const BlueColorButton = styled.TouchableOpacity`
   width:90%;
   height:28px;
 `;
-export const YellowColorButton = styled.Button`
+export const YellowColorButton = styled.TouchableOpacity`
   width:90%;
   height:28px;
 `;
-export const PinkColorButton = styled.Button`
+export const PinkColorButton = styled.TouchableOpacity`
   width:90%;
   height:28px;
 `;
@@ -213,7 +213,7 @@ export const ButtonContainer = styled.View`
   align-items: center;
 
 `;
-export const CleanFilterButton = styled.Button`
+export const CleanFilterButton = styled.TouchableOpacity`
   width:100%;
   height:28px;
 `;

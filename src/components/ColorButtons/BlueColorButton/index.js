@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button} from "./styles"
+import {Button, ButtonText} from "./styles"
 
 export default function BlueColorButton({getBlueColor}){
 
@@ -37,7 +37,9 @@ export default function BlueColorButton({getBlueColor}){
         getBlueColor(BlueColorArray)
       }
     }
-    />
+    >
+      <ButtonText>Azul</ButtonText>
+    </Button>
   );
  
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button} from "./styles"
+import {Button,ButtonText} from "./styles"
 
 export default function YellowColorButton({getYellowColor}){
 
@@ -36,6 +36,8 @@ export default function YellowColorButton({getYellowColor}){
     <Button disabled={statusColor} title="Amarelo" onPress={() => {
       YellowColor()
       getYellowColor={yellowColorArray}}
-    } />
+    } >
+        <ButtonText>Amarelo</ButtonText>
+    </Button>
   );
 }

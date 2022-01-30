@@ -12,9 +12,7 @@ import {
   ButtonContainer,
   CleanFilterButton,
 } from './styles';
-const ListItem = styled('li')(({ theme }) => ({
-  margin: theme.spacing(0.5),
-}));
+
 export default function Config({ navigation }) {
   const [redColor, setRedColor] = useState()
   const [blueColor, setBlueColor] = useState()

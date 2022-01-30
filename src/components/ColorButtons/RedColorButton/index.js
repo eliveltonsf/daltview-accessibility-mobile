@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button} from "./styles"
+import {Button,ButtonText} from "./styles"
 
 export default function RedColorButton({getRedColor}){
 
@@ -58,6 +58,8 @@ export default function RedColorButton({getRedColor}){
       redColorAfter0()
       redColorBefore180()
       getRedColor(redColorArray)}
-    } />
+    } >
+       <ButtonText>Vermelho</ButtonText>
+    </Button>
   );
 }

@@ -3,7 +3,10 @@ import {Button} from "react-native";
 
 export default function PinkColorButton({getPinkColor}){
 
-  let pinkColorArray = [];
+  let pinkColorArray ={ 
+    colorID = 3,
+    rangeColor=[]
+  };
   
   const pinkColor = () => {
 
@@ -21,7 +24,7 @@ export default function PinkColorButton({getPinkColor}){
 
     for (let ih = initialRange.h; ih <= finishedRange.h; ih++) {
       for (let is = initialRange.s; is <= finishedRange.s; is++) {
-        pinkColorArray.push({h: ih, s:is, v:255});
+        pinkColorArray.rangeColor.push({h: ih, s:is, v:255});
       }      
     }
   }

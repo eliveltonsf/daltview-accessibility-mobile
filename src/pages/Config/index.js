@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet } from 'react-native';
 import RedColorButton from '../../components/ColorButtons/RedColorButton';
 import GreenColorButton from '../../components/ColorButtons/GreenColorButton';
@@ -6,7 +6,7 @@ import BlueColorButton from '../../components/ColorButtons/BlueColorButton';
 import YellowColorButton from '../../components/ColorButtons/YellowColorButton';
 import PinkColorButton from '../../components/ColorButtons/PinkColorButton';
 
-
+import Chip from '@mui/material/Chip'
 
 import {
   Container,
@@ -19,6 +19,10 @@ import {
   PinkCard
 } from './styles';
 
+const ListItem = styled('li')(({ theme }) => ({
+  margin: theme.spacing(0.5),
+}));
+
 export default function Config({ navigation }) {
 
   const [redColor, setRedColor] = useState()
@@ -27,26 +31,42 @@ export default function Config({ navigation }) {
   const [yellowColor, setYellowColor] = useState()
   const [greenColor, setGreenColor] = useState()
 
+  const [chipData, setChipData] = useState([]);
+
+  
+
   const array = []
   const allColors = array.concat(redColor,blueColor,pinkColor,yellowColor,greenColor)
   console.log(allColors)
   
   const getRedColor = (redColor) => {
     setRedColor(redColor)
+    setChipData(... {key:0, label:"Vermelho"})
   }
   const getBlueColor = (blueColor) => {
     setBlueColor(blueColor)
+    setChipData(... {key:1, label:"Azul"})
   }
   const getPinkColor = (pinkColor) => {
     setPinkColor(pinkColor)
+    setChipData(... {key:2, label:"Rosa"})
+
   }
   const getYellowColor = (yellowColor) => {
     setYellowColor(yellowColor)
+    setChipData(... {key:3, label:"Amarelo"})
+
   }
   const getGreenColor = (greenColor) => {
     setGreenColor(greenColor)
+    setChipData(... {key:4, label:"Verde"})
+
   }
 
+  const handleDelete = (chipToDelete) => () => {
+    setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
+  };
+  
   return (
     <Container source>
       <ConfigAreaView>
@@ -60,21 +80,17 @@ export default function Config({ navigation }) {
         <PinkColorButton getPinkColor={getPinkColor}/>
         <CardsContainer>
           
-          { allColors.forEach((eachColor) => {eachColor.colorID === 4}) &&
-            <RedCard>VERMELHO</RedCard>
-            }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 2})&&
-            <GreenCard>VERDE</GreenCard>
-            }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 1})&&
-            <BlueCard>AZUL</BlueCard> 
-            }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 5})&&
-            <YellowCard>AMARELO</YellowCard>
-            }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 3})&&
-          <PinkCard>ROSA</PinkCard>
-          }
+        {chipData.map((data) => {
+        
+        return (
+          <ListItem key={data.key}>
+            <Chip
+              label={data.label}
+              onDelete={data.label === 'React' ? undefined : handleDelete(data)}
+            />
+          </ListItem>
+        );
+      })}
 
         </CardsContainer>
       </ConfigAreaView>

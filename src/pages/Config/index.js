@@ -48,11 +48,30 @@ export default function Config({ navigation }) {
         <Title>
           We found the colors for you, select your preferred colors.
         </Title>
-        <RedColorButton getRedColor={getRedColor}/>
-        <GreenColorButton getGreenColor={getGreenColor}/>
-        <BlueColorButton getBlueColor={getBlueColor} />
-        <YellowColorButton getYellowColor={getYellowColor}/>
-        <PinkColorButton getPinkColor={getPinkColor}/>
+        { allColors.map((eachColor) => {eachColor.colorID !== 4})?
+          <RedColorButton getRedColor={getRedColor}/> :
+          <RedColorButton getRedColor={getRedColor} disabled/>
+          
+          }
+        {allColors.map((eachColor) => {eachColor.colorID !== 2})?
+          <GreenColorButton getGreenColor={getGreenColor}/> :
+          <GreenColorButton getGreenColor={getGreenColor} disabled/> 
+          }
+        {allColors.map((eachColor) => {eachColor.colorID !== 1})?
+          <BlueColorButton getBlueColor={getBlueColor}/> :
+          <BlueColorButton getBlueColor={getBlueColor} disabled/>
+
+          }
+        {allColors.map((eachColor) => {eachColor.colorID !== 5})?
+          <YellowColorButton getYellowColor={getYellowColor}/>:
+          <YellowColorButton getYellowColor={getYellowColor} disabled/>
+
+          }
+        {allColors.map((eachColor) => {eachColor.colorID !== 3})?
+          <PinkColorButton getPinkColor={getPinkColor}/> :
+          <PinkColorButton getPinkColor={getPinkColor} disabled/>
+
+          }
       </ConfigAreaView>
     </Container>
   );

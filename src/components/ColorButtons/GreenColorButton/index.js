@@ -3,7 +3,10 @@ import {Button} from "react-native";
 
 export default function GreenColorButton({getGreenColor}){
 
-  let greenColorArray = [];
+  let greenColorArray = {
+    colorID = 2,
+    rangeColor=[]
+  };
 
   const GreenColor = () => {
     const initialRange = {
@@ -20,7 +23,7 @@ export default function GreenColorButton({getGreenColor}){
 
     for (let ih = initialRange.h; ih <= finishedRange.h; ih++) {
       for (let is = initialRange.s; is <= finishedRange.s; is++) {
-        greenColorArray.push({ h: ih, s: is, v: initialRange.v });
+        greenColorArray.rangeColor.push({ h: ih, s: is, v: initialRange.v });
       }
     }
   };

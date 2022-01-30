@@ -7,7 +7,7 @@ import {StyleSheet, } from 'react-native';
 
 import {Button,Image, Text} from 'react-native-elements';
 
-import {launchImageLibrary} from 'react-native-image-picker';
+import ImagePicker from 'react-native-image-picker';
 
 import {Container, ProductAreaView} from './styles';
 
@@ -29,7 +29,42 @@ const styles = StyleSheet.create({
 
 export default function Main({navigation}) {
 
+  const [avatar, setAvatar] = useState();
+
   const { navigate } = navigation;
+
+  function imagePickerCallback(data) {
+    // if (data.didCancel) {
+    //   return;
+    // }
+
+    // if (data.error) {
+    //   return;
+    // }
+
+    // if (data.customButton) {
+    //   return;
+    // }
+
+    // if (!data.uri) {
+    //   return;
+    // }
+
+    setAvatar(data);
+    console.log(data)
+  }
+
+  async function uploadImage() {
+    const data = new FormData();
+
+    data.append('avatar', {
+      fileName: avatar.fileName,
+      uri: avatar.uri,
+      type: avatar.type,
+    });
+
+    await Axios.post('http://localhost:3333/files', data);
+  }
 
   const captureImage = async (type) => {
     let options = {
@@ -57,6 +92,7 @@ export default function Main({navigation}) {
           return;
         }
         const res = JSON.stringify(response.assets[0].uri);
+        console.log(JSON.stringify(response.assets[0]))
      
         setFilePath(res.split('"').join(''))
       });
@@ -99,7 +135,7 @@ export default function Main({navigation}) {
     <Container source>
       <Header navigation={navigation} />
       <ProductAreaView>
-        <Button
+        {/* <Button
           title="Capture to cam"
           buttonStyle={{backgroundColor: 'rgba(39, 39, 39, 1)'}}
           containerStyle={{
@@ -109,7 +145,7 @@ export default function Main({navigation}) {
           }}
           titleStyle={{color: 'white', marginHorizontal: 20}}
           onPress={() => captureImage('photo')}
-        />
+        /> */}
 
         <Button
           title="Import to gallary"
@@ -120,7 +156,7 @@ export default function Main({navigation}) {
             marginVertical: 10,
           }}
           titleStyle={{color: 'white', marginHorizontal: 20}}
-          onPress={() => chooseFile('photo')}
+          onPress={() => { navigate('Imageview') }}
         />
       </ProductAreaView>
     </Container>

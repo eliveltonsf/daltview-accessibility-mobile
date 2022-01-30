@@ -20,7 +20,7 @@
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^2.2.0",
     "react-native-get-pixel": "^0.0.5",
-    "react-native-image-picker": "^4.7.3",
+    "react-native-image-picker": "1.1.0",
     "react-native-pixel-color": "^0.0.5",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-vector-icons": "^9.0.0",

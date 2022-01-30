@@ -48,7 +48,7 @@ export default function RedColorButton({getRedColor}){
 
     for (let ih = initialRange.h; ih <= finishedRange.h; ih++) {
       for (let is = initialRange.s; is <= finishedRange.s; is++) {
-        redColorArray.push({h: ih, s:is, v:255});
+        redColorArray.rangeColor.push({h: ih, s:is, v:255});
       }      
     }
   }

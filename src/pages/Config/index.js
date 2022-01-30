@@ -16,7 +16,8 @@ import {
   GreenCard,
   BlueCard,
   YellowCard,
-  PinkCard
+  PinkCard,
+  CardsContainer
 } from './styles';
 
 export default function Config({ navigation }) {
@@ -60,19 +61,19 @@ export default function Config({ navigation }) {
         <PinkColorButton getPinkColor={getPinkColor}/>
         <CardsContainer>
           
-          { allColors.forEach((eachColor) => {eachColor.colorID === 4}) &&
+          { allColors.forEach((eachColor) => {eachColor?.colorID === 4}) &&
             <RedCard>VERMELHO</RedCard>
             }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 2})&&
+          {allColors.forEach((eachColor) => {eachColor?.colorID === 2})&&
             <GreenCard>VERDE</GreenCard>
             }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 1})&&
+          {allColors.forEach((eachColor) => {eachColor?.colorID === 1})&&
             <BlueCard>AZUL</BlueCard> 
             }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 5})&&
+          {allColors.forEach((eachColor) => {eachColor?.colorID === 5})&&
             <YellowCard>AMARELO</YellowCard>
             }
-          {allColors.forEach((eachColor) => {eachColor.colorID === 3})&&
+          {allColors.forEach((eachColor) => {eachColor?.colorID === 3})&&
           <PinkCard>ROSA</PinkCard>
           }
 

@@ -202,3 +202,6 @@ export const PinkCard = styled.View`
   flex-direction: row;
   justify-content: space-between;
 `;
+
+export const CardsContainer = styled.View`
+`;

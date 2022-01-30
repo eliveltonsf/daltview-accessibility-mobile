@@ -182,23 +182,38 @@ export const TextPurchase = styled.Text`
   text-transform: uppercase;
   color: #fff;
 `;
-export const RedCard = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
+export const RedColorButton = styled.Button`
+  width:90%;
+  height:28px;
+
 `;
-export const GreenCard = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
+export const GreenColorButton = styled.Button`
+  width:90%;
+  height:28px;
 `;
-export const BlueCard = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
+export const BlueColorButton = styled.Button`
+  width:90%;
+  height:28px;
 `;
-export const YellowCard = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
+export const YellowColorButton = styled.Button`
+  width:90%;
+  height:28px;
 `;
-export const PinkCard = styled.View`
-  flex-direction: row;
+export const PinkColorButton = styled.Button`
+  width:90%;
+  height:28px;
+`;
+export const ButtonContainer = styled.View`
+  flex-direction: column;
   justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+
+`;
+export const CleanFilterButton = styled.Button`
+  width:100%;
+  height:28px;
 `;

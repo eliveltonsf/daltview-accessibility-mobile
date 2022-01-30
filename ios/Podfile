@@ -16,6 +16,8 @@ target 'daltViewAccessibility' do
 
   pod 'react-native-pixel-color', :path => '../node_modules/react-native-pixel-color'
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   target 'daltViewAccessibilityTests' do
     inherit! :complete
     # Pods for testing

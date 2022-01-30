@@ -3,12 +3,15 @@ import {Button} from "react-native";
 
 export default function PinkColorButton({getPinkColor}){
 
+  const [statusColor, setStatusColor] = useState(false)
+
   let pinkColorArray ={ 
-    colorID = 3,
-    rangeColor=[]
+    colorID : 3,
+    rangeColor : []
   };
   
   const pinkColor = () => {
+    setStatusColor(true)
 
     const initialRange = {
       h: 136,
@@ -30,7 +33,7 @@ export default function PinkColorButton({getPinkColor}){
   }
 
   return (
-    <Button title="Rosa" onPress={() => {
+    <Button disabled={statusColor} title="Rosa" onPress={() => {
       pinkColor()
       getPinkColor(pinkColorArray)}
     } />

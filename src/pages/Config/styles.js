@@ -69,10 +69,10 @@ export const Tshirt = styled.Text`
 export const ButtonDeleteConfig = styled.TouchableOpacity``;
 
 export const Title = styled.Text.attrs({
-  numberOfLines: 1,
+  numberOfLines: 3,
 })`
   font-size: 16px;
-  color: #666;
+  color: black;
 `;
 
 export const PriceContainer = styled.View`

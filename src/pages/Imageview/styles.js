@@ -7,9 +7,9 @@ export const Container = styled.View`
 `;
 
 export const ProductAreaView = styled.SafeAreaView`
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  height: 80%;
+  height: 100%;
 `;
 
 export const List = styled.FlatList.attrs({
@@ -27,8 +27,8 @@ export const ProductContainer = styled.View`
 
 export const Image = styled.Image`
   align-self: center;
-  width: 250px;
-  height: 200px;
+  width: 100%;
+  height: 80%;
 `;
 
 export const Title = styled.Text.attrs({

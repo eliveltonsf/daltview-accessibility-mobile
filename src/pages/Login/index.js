@@ -4,12 +4,10 @@ import { Button } from 'react-native-elements';
 import {
   Container,
   ProductAreaView,
-<<<<<<< HEAD
-  Title
-=======
+  Title,
+  Image,
   FirstAcessButton,
   AccountButton
->>>>>>> 20918ad77ee28d6a09679fc6f568bfe037a28ba6
 } from './styles';
 
 
@@ -17,15 +15,11 @@ export default function Login({ navigation }) {
   const { navigate } = navigation;
 
   return (
-<<<<<<< HEAD
     <Container>
       <ProductAreaView>
 
-=======
-    <Container source>
-      <ProductAreaView>
-      <Image/>
->>>>>>> 20918ad77ee28d6a09679fc6f568bfe037a28ba6
+      {/* <Image/> */}
+
       <Title>
         Be sure about colors in your everyday life
       </Title>

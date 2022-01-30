@@ -27,10 +27,12 @@ export const ProductContainer = styled.View`
 
 export const Image = styled.Image`
   align-self: center;
-  width: 250px;
-  height: 200px;
+  width: 294px;
+  height: 89px;
   background-image: url("../../assets/images/logoDalto.png");
   background-repeat: no-repeat;
+  margin-top: 230px;
+  margin-bottom:90px;
 `;
 
 export const Title = styled.Text.attrs({
@@ -80,4 +82,19 @@ export const ButtonText = styled.Text`
 export const ProductAmount = styled.Text`
   color: #fff;
   margin-left: 5px;
+`;
+export const FirstAcessButton = styled.Button`
+  color: #6f6f6f;
+  background: #fff;
+  width: 80%;
+  align-self: center;
+  margin: 20px auto;
+  margin-top: 40px;
+`;
+export const AccountButton = styled.Button`
+  color: #fff;
+  background: #6f6f6f;
+  width: 80%;
+  align-self: center;
+  
 `;

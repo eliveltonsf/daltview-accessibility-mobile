@@ -4,7 +4,9 @@ import { Button } from 'react-native-elements';
 
 import {
   Container,
-  ProductAreaView
+  ProductAreaView,
+  FirstAcessButton,
+  AccountButton
 } from './styles';
 
 
@@ -16,20 +18,18 @@ export default function Login({navigation}) {
       <Header/>
       <ProductAreaView>
 
-      <Image>
-
-      </Image>
+      <Image/>
 
       <Title>
         Be sure about colors in your everyday life
       </Title>
 
-      <Button
+      <FirstAcessButton
         title="First Access"
         onPress={( )=>{navigate("Main")}}
         buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
       />
-      <Button
+      <AccountButton
         title="I have an Account"
         onPress={( )=>{navigate("Main")}}
         buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}

@@ -11,7 +11,12 @@ import PinkColorButton from '../../components/ColorButtons/PinkColorButton';
 import {
   Container,
   ConfigAreaView,
-  Title
+  Title,
+  RedCard,
+  GreenCard,
+  BlueCard,
+  YellowCard,
+  PinkCard
 } from './styles';
 
 export default function Config({ navigation }) {
@@ -48,30 +53,30 @@ export default function Config({ navigation }) {
         <Title>
           We found the colors for you, select your preferred colors.
         </Title>
-        { allColors.map((eachColor) => {eachColor.colorID !== 4})?
-          <RedColorButton getRedColor={getRedColor}/> :
-          <RedColorButton getRedColor={getRedColor} disabled/>
+        <RedColorButton getRedColor={getRedColor}/>
+        <GreenColorButton getGreenColor={getGreenColor}/>
+        <BlueColorButton getBlueColor={getBlueColor}/>
+        <YellowColorButton getYellowColor={getYellowColor}/>
+        <PinkColorButton getPinkColor={getPinkColor}/>
+        <CardsContainer>
           
+          { allColors.forEach((eachColor) => {eachColor.colorID === 4}) &&
+            <RedCard>VERMELHO</RedCard>
+            }
+          {allColors.forEach((eachColor) => {eachColor.colorID === 2})&&
+            <GreenCard>VERDE</GreenCard>
+            }
+          {allColors.forEach((eachColor) => {eachColor.colorID === 1})&&
+            <BlueCard>AZUL</BlueCard> 
+            }
+          {allColors.forEach((eachColor) => {eachColor.colorID === 5})&&
+            <YellowCard>AMARELO</YellowCard>
+            }
+          {allColors.forEach((eachColor) => {eachColor.colorID === 3})&&
+          <PinkCard>ROSA</PinkCard>
           }
-        {allColors.map((eachColor) => {eachColor.colorID !== 2})?
-          <GreenColorButton getGreenColor={getGreenColor}/> :
-          <GreenColorButton getGreenColor={getGreenColor} disabled/> 
-          }
-        {allColors.map((eachColor) => {eachColor.colorID !== 1})?
-          <BlueColorButton getBlueColor={getBlueColor}/> :
-          <BlueColorButton getBlueColor={getBlueColor} disabled/>
 
-          }
-        {allColors.map((eachColor) => {eachColor.colorID !== 5})?
-          <YellowColorButton getYellowColor={getYellowColor}/>:
-          <YellowColorButton getYellowColor={getYellowColor} disabled/>
-
-          }
-        {allColors.map((eachColor) => {eachColor.colorID !== 3})?
-          <PinkColorButton getPinkColor={getPinkColor}/> :
-          <PinkColorButton getPinkColor={getPinkColor} disabled/>
-
-          }
+        </CardsContainer>
       </ConfigAreaView>
     </Container>
   );

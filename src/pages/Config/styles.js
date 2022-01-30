@@ -182,3 +182,23 @@ export const TextPurchase = styled.Text`
   text-transform: uppercase;
   color: #fff;
 `;
+export const RedCard = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+export const GreenCard = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+export const BlueCard = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+export const YellowCard = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+export const PinkCard = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;

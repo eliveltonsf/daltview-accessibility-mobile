@@ -158,10 +158,10 @@ export default function Main({navigation}) {
           titleStyle={{color: 'white', marginHorizontal: 20}}
           onPress={() => { navigate('Imageview') }}
         />
-        <CheckBox
+        {/* <CheckBox
           value={false}
           onValueChange={true}
-        />
+        /> */}
       </ProductAreaView>
     </Container>
   );

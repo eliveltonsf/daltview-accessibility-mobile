@@ -83,7 +83,7 @@ export const ProductAmount = styled.Text`
   color: #fff;
   margin-left: 5px;
 `;
-export const FirstAcessButton = styled.Button`
+export const FirstAcessButton = styled.TouchableOpacity`
   color: #6f6f6f;
   background: #fff;
   width: 80%;
@@ -91,7 +91,7 @@ export const FirstAcessButton = styled.Button`
   margin: 20px auto;
   margin-top: 40px;
 `;
-export const AccountButton = styled.Button`
+export const AccountButton = styled.TouchableOpacity`
   color: #fff;
   background: #6f6f6f;
   width: 80%;

@@ -6,8 +6,8 @@ export default function BlueColorButton({getBlueColor}){
   const [statusColor, setStatusColor] = useState(false)
 
   let BlueColorArray = {
-    colorID = 1,
-    rangeColor=[]
+    colorID : 1,
+    rangeColor:[]
   };
 
   const BlueColor = () => {

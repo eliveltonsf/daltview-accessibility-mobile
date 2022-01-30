@@ -6,8 +6,8 @@ export default function YellowColorButton({getYellowColor}){
   const [statusColor, setStatusColor] = useState(false)
 
   let yellowColorArray = {
-    colorID = 5,
-    rangeColor=[]
+    colorID : 5,
+    rangeColor:[]
   };
 
   const YellowColor = () => {

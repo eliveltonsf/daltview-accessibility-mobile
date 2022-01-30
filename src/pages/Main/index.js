@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Header from '../../components/Header';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {StyleSheet, } from 'react-native';
+import {StyleSheet, CheckBox } from 'react-native';
 
 import {Button,Image, Text} from 'react-native-elements';
 
@@ -121,6 +121,10 @@ export default function Main({navigation}) {
           }}
           titleStyle={{color: 'white', marginHorizontal: 20}}
           onPress={() => chooseFile('photo')}
+        />
+        <CheckBox
+          value={false}
+          onValueChange={true}
         />
       </ProductAreaView>
     </Container>

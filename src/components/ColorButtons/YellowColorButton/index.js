@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button} from "react-native";
 
-export default function YellowColorButton( ){
+export default function YellowColorButton({getYellowColor}){
 
   let yellowColorArray = [];
 
@@ -28,7 +28,7 @@ export default function YellowColorButton( ){
   return (
     <Button title="Amarelo" onPress={() => {
       YellowColor()
-      console.log('Amarelo', yellowColorArray)}
+      getYellowColor={yellowColorArray}}
     } />
   );
 }

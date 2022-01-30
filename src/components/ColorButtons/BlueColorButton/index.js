@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button} from "react-native";
 
-export default function BlueColorButton( ){
+export default function BlueColorButton({getBlueColor}){
 
   let BlueColorArray = [];
 
@@ -28,7 +28,8 @@ export default function BlueColorButton( ){
   return (
     <Button title="Azul" onPress={() => {
       BlueColor()
-      console.log('Azul', BlueColorArray)}
-    } />
+      getBlueColor(BlueColorArray)}
+      
+    }/>
   );
 }

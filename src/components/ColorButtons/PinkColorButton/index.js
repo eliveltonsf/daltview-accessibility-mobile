@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button} from "react-native";
 
-export default function PinkColorButton( ){
+export default function PinkColorButton({getPinkColor}){
 
   let pinkColorArray = [];
   
@@ -29,7 +29,7 @@ export default function PinkColorButton( ){
   return (
     <Button title="Rosa" onPress={() => {
       pinkColor()
-      console.log('rosa', pinkColorArray)}
+      getPinkColor(pinkColorArray)}
     } />
   );
 }

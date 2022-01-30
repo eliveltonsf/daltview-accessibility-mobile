@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet } from 'react-native';
 import RedColorButton from '../../components/ColorButtons/RedColorButton';
 import GreenColorButton from '../../components/ColorButtons/GreenColorButton';
 import BlueColorButton from '../../components/ColorButtons/BlueColorButton';
 import YellowColorButton from '../../components/ColorButtons/YellowColorButton';
 import PinkColorButton from '../../components/ColorButtons/PinkColorButton';
-
 
 
 import {
@@ -20,6 +19,10 @@ import {
   CardsContainer
 } from './styles';
 
+const ListItem = styled('li')(({ theme }) => ({
+  margin: theme.spacing(0.5),
+}));
+
 export default function Config({ navigation }) {
 
   const [redColor, setRedColor] = useState()
@@ -28,7 +31,9 @@ export default function Config({ navigation }) {
   const [yellowColor, setYellowColor] = useState()
   const [greenColor, setGreenColor] = useState()
 
-  const array = []
+
+  let array = []
+
   const allColors = array.concat(redColor,blueColor,pinkColor,yellowColor,greenColor)
   console.log(allColors)
   
@@ -40,14 +45,18 @@ export default function Config({ navigation }) {
   }
   const getPinkColor = (pinkColor) => {
     setPinkColor(pinkColor)
+
   }
   const getYellowColor = (yellowColor) => {
     setYellowColor(yellowColor)
+
   }
   const getGreenColor = (greenColor) => {
     setGreenColor(greenColor)
+
   }
 
+  
   return (
     <Container source>
       <ConfigAreaView>
@@ -59,7 +68,6 @@ export default function Config({ navigation }) {
         <BlueColorButton getBlueColor={getBlueColor}/>
         <YellowColorButton getYellowColor={getYellowColor}/>
         <PinkColorButton getPinkColor={getPinkColor}/>
-        <CardsContainer>
           
           { allColors.forEach((eachColor) => {eachColor?.colorID === 4}) &&
             <RedCard>VERMELHO</RedCard>
@@ -77,7 +85,6 @@ export default function Config({ navigation }) {
           <PinkCard>ROSA</PinkCard>
           }
 
-        </CardsContainer>
       </ConfigAreaView>
     </Container>
   );

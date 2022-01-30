@@ -6,17 +6,14 @@ import BlueColorButton from '../../components/ColorButtons/BlueColorButton';
 import YellowColorButton from '../../components/ColorButtons/YellowColorButton';
 import PinkColorButton from '../../components/ColorButtons/PinkColorButton';
 
-import Chip from '@mui/material/Chip'
 
 import {
   Container,
   ConfigAreaView,
   Title,
-  RedCard,
-  GreenCard,
-  BlueCard,
-  YellowCard,
-  PinkCard
+  ButtonContainer,
+  CleanFilterButton,
+
 } from './styles';
 
 const ListItem = styled('li')(({ theme }) => ({

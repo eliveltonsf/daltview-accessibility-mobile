@@ -15,11 +15,8 @@ export default function Login({navigation}) {
 
   return (
     <Container source>
-      <Header/>
       <ProductAreaView>
-
       <Image/>
-
       <Title>
         Be sure about colors in your everyday life
       </Title>

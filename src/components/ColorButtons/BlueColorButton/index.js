@@ -3,7 +3,10 @@ import {Button} from "react-native";
 
 export default function BlueColorButton({getBlueColor}){
 
-  let BlueColorArray = [];
+  let BlueColorArray = {
+    colorID = 1,
+    rangeColor=[]
+  };
 
   const BlueColor = () => {
     const initialRange = {
@@ -20,7 +23,7 @@ export default function BlueColorButton({getBlueColor}){
 
     for (let ih = initialRange.h; ih <= finishedRange.h; ih++) {
       for (let is = initialRange.s; is <= finishedRange.s; is++) {
-        BlueColorArray.push({ h: ih, s: is, v: initialRange.v });
+        BlueColorArray.rangeColor.push({ h: ih, s: is, v: initialRange.v });
       }
     }
   };

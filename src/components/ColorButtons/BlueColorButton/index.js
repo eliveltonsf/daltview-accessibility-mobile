@@ -3,12 +3,15 @@ import {Button} from "react-native";
 
 export default function BlueColorButton({getBlueColor}){
 
+  const [statusColor, setStatusColor] = useState(false)
+
   let BlueColorArray = {
     colorID = 1,
     rangeColor=[]
   };
 
   const BlueColor = () => {
+    setStatusColor(true)
     const initialRange = {
       h: 66,
       s: 100,
@@ -29,7 +32,7 @@ export default function BlueColorButton({getBlueColor}){
   };
 
   return (
-    <Button title="Azul" onPress={() => {
+    <Button disabled={statusColor} title="Azul" onPress={() => {
         BlueColor()       
         getBlueColor(BlueColorArray)
       }

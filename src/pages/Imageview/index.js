@@ -1,40 +1,23 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 
-import Header from '../../components/Header';
+import {Container, ProductAreaView, Image} from './styles';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {StyleSheet, } from 'react-native';
-
-import {Button,Image, Text} from 'react-native-elements';
-
-import {launchImageLibrary} from 'react-native-image-picker';
-
-import {Container, ProductAreaView} from './styles';
-
-Icon.loadFont();
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.23,
-    shadowRadius: 2.62,
-
-    elevation: 4,
-  },
-});
+import PixelColor from 'react-native-pixel-color';
 
 export default function Imageview({route}) {
 
+  useEffect(() => {
+    PixelColor.getHex(route.params.paramKey, {x: 50, y: 60}).then().catch((err) => {
+       console.log(err)
+     });
+  }, []);  
+
+
   return (
-    <Container source>
+    <Container >
       <ProductAreaView>
         <Image
           source={{uri: route.params.paramKey}}
-          style={{ width: 200, height: 200 }}
         />
 
       </ProductAreaView>

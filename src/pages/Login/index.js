@@ -8,22 +8,34 @@ import {
 } from './styles';
 
 
-export default function Login() {
+export default function Login({navigation}) {
+  const { navigate } = navigation;
 
   return (
     <Container source>
       <Header/>
       <ProductAreaView>
+
+      <Image>
+
+      </Image>
+
+      <Title>
+        Be sure about colors in your everyday life
+      </Title>
+
       <Button
-                title="Import"
-                buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
-                containerStyle={{
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-                titleStyle={{ color: 'white', marginHorizontal: 20 }}
-              />
+        title="First Access"
+        onPress={( )=>{navigate("Main")}}
+        buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
+      />
+      <Button
+        title="I have an Account"
+        onPress={( )=>{navigate("Main")}}
+        buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
+      />
+      
+
       </ProductAreaView>
     </Container>
   );

@@ -24,7 +24,8 @@ export default function Config({ navigation }) {
 
   const array = []
   const allColors = array.concat(redColor,blueColor,pinkColor,yellowColor,greenColor)
-
+  console.log(allColors)
+  
   const getRedColor = (redColor) => {
     setRedColor(redColor)
   }

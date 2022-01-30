@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Main from './pages/Main';
 import Config from './pages/Config';
+import Imageview from './pages/Imageview';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,10 @@ function Routes() {
           },
           headerTintColor: '#fff',
         }}
+      />
+       <Stack.Screen
+        name="Imageview"
+        component={Imageview}       
       />
     </Stack.Navigator>
   );

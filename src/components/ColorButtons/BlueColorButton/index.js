@@ -27,9 +27,11 @@ export default function BlueColorButton({getBlueColor}){
 
   return (
     <Button title="Azul" onPress={() => {
-      BlueColor()
-      getBlueColor(BlueColorArray)}
-      
-    }/>
+        BlueColor()       
+        getBlueColor(BlueColorArray)
+      }
+    }
+    />
   );
+ 
 }

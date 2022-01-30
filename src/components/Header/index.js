@@ -13,10 +13,10 @@ export default function Header({ navigation }) {
     <Container>
       {/* <LinkLogo onPress={() => navigate('Main')}>
         <Logo source={logo} alt="Grolli T Shirt" />
-      </LinkLogo>
+      </LinkLogo> */}
       <ContainerCart onPress={() => navigate('Config')}>
         <Icon name="settings" size={30} color="rgba(39, 39, 39, 1)" />
-      </ContainerCart> */}
+      </ContainerCart>
     </Container>
   );
 }

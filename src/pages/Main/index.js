@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
 });
 
 export default function Main({navigation}) {
-  const [filePath, setFilePath] = useState();
+
+  const { navigate } = navigation;
 
   const captureImage = async (type) => {
     let options = {
@@ -88,7 +89,10 @@ export default function Main({navigation}) {
       
       const res = JSON.stringify(response.assets[0].uri);
       console.log(res)
-      setFilePath(res.split('"').join(''))
+
+      navigate('Imageview', {
+        paramKey: res.split('"').join(''),
+      })
     });
   }
 
@@ -96,20 +100,6 @@ export default function Main({navigation}) {
     <Container source>
       <Header navigation={navigation} />
       <ProductAreaView>
-
-         {/* <Image
-          source={{
-            uri: 'data:image/jpeg;base64,' + filePath.data,
-          }}
-          style={styles.imageStyle}
-        /> */}
-        <Image
-          source={{uri: filePath}}
-          style={{ width: 200, height: 200 }}
-        />
-        <Text >{filePath}</Text>
-
-
         <Button
           title="Capture to cam"
           buttonStyle={{backgroundColor: 'rgba(39, 39, 39, 1)'}}

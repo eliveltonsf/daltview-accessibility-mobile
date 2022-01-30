@@ -88,7 +88,6 @@ export default function Main({navigation}) {
       }
       
       const res = JSON.stringify(response.assets[0].uri);
-      console.log(res)
 
       navigate('Imageview', {
         paramKey: res.split('"').join(''),
